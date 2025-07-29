@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ρѕγϲнο ∂υϲκ</title>
+    <link rel="icon" href="https://bykonohacker.sirv.com/Spins/Cu/Picsart_25-06-29_20-20-11-841.jpg" type="image/jpeg">
+    <style>
+        *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:linear-gradient(135deg,#2d1b69,#0a0520);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:20px}h1{color:#bb86fc;text-align:center;margin-bottom:25px;font-size:clamp(22px,5vw,32px)}.container{width:100%;max-width:450px;display:flex;flex-direction:column;gap:12px;background:rgba(255,255,255,.04);padding:25px;border-radius:12px;border:1px solid rgba(187,134,252,.15)}input,button{padding:12px;border:none;font-size:15px;border-radius:8px;width:100%;transition:all .2s}input{background:rgba(44,0,89,.7);color:#fff;border:1px solid rgba(187,134,252,.2);outline:none}input:focus{border-color:#bb86fc}input::placeholder{color:#aaa}button{background:linear-gradient(45deg,#bb86fc,#9b6ccc);color:#000;cursor:pointer;font-weight:600}button:hover{transform:translateY(-1px)}button:disabled{opacity:.6}.status{text-align:center;font-size:13px;margin-top:8px;min-height:18px;opacity:0;transition:opacity .2s;padding:6px;border-radius:6px}.status.show{opacity:1}.error{color:#ff6b6b}.success{color:#4ecdc4}.info{color:#ffd93d}@media(max-width:500px){body{padding:12px}.container{padding:18px}}
+    </style>
+</head>
+<body>
+    <h1>ρѕγϲнο ∂υϲκ</h1>
+    <div class="container">
+        <input type="url" id="link" placeholder="Cole o link encurtado aqui..." autocomplete="off">
+        <button onclick="pular()" id="btn">Pular Link</button>
+        <div class="status" id="status"></div>
+    </div>
+</body>
+</html>
+    <script>
+        function showStatus(m,t='info'){const s=document.getElementById('status');s.textContent=m;s.className=`status show ${t}`;setTimeout(()=>s.classList.remove('show'),2500)}function pular(){const i=document.getElementById('link'),b=document.getElementById('btn'),u=i.value.trim();if(!u){showStatus('Cole o link!','error');return}b.disabled=true;b.textContent='Pulando...';setTimeout(()=>{window.open(u.startsWith('http')?u:'https://'+u,'_blank');showStatus('Aberto!','success');b.disabled=false;b.textContent='Pular Agora'},200)}document.getElementById('link').addEventListener('keypress',e=>{if(e.key==='Enter')pular()});
+    </script>
+</body>
+</html>
